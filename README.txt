@@ -2,7 +2,7 @@ Ceci est un projet de conception des systèmes électronique d'un vélo électri
 
 L'ensemble du projet est open source et open hardware.
 
-Le schéma de principe est composé de :
+Cahier des charges :
 
 	- un circuit BMS communicant
 	- un contrôleur (hôte) moteur/générateur électrique
@@ -15,11 +15,12 @@ Le circuit BMS communicant :
 	- monitoring du courant entrant/sortant du pack
 	- communication SPI/I2C/UART avec le contrôleur moteur
 	- protection clasique BMS (short-circuit, overcharge, undercharge, overcurrent, overheating)
-	- chargeur intégré dans le pack (voir si réalisable en 220v direct, sinon 19v/12v/5v)
+	- chargeur intégré dans le pack (19v/12v/5v)
+	- possibilité de couper le circuit pour une conso minimale
 	
 Le contrôleur :
 	- communication avec les esclave (TDB, BMS)
-	- contrôle de 2 moteur brushless triphasé (moteur ou générateur)
+	- contrôle de 2 moteur brushless triphasé (moteur ou générateur) (avec option capteur hall)
 	- communication via port usb ou port serie pour parametrage via logiciel pc
 	- frein régénératif progressif et paramétrable en fonction de la batterie
 	- recharge en pédalant (compensation des conso éclairage, voir très legère recharge batterie)
@@ -41,3 +42,36 @@ Le TDB (optionnel):
 	- lecture position comodo d'éclairage
 	- antivol numérique par code pin ou séquence comodo
 	- communication avec le contrôleur
+	
+	
+Composant du BMS :
+	- Micocontôleur PIC16(L)F19175/76
+	- power mosfet
+	- resistances
+	- 32khz crystal
+	- buck converter (12v et 5v)
+	- boost converter (chargeur intégré)
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
