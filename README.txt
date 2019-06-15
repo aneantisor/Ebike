@@ -17,6 +17,7 @@ Le circuit BMS communicant :
 	- protection clasique BMS (short-circuit, overcharge, undercharge, overcurrent, overheating)
 	- chargeur intégré dans le pack (19v/12v/5v)
 	- possibilité de couper le circuit pour une conso minimale
+	- circuit d'équilibrage des cellules
 	
 Le contrôleur :
 	- communication avec les esclave (TDB, BMS)
@@ -44,17 +45,11 @@ Le TDB (optionnel):
 	- communication avec le contrôleur
 	
 	
-Composant du BMS :
-	- Micocontôleur PIC16(L)F19175/76
-	- power mosfet
-	- resistances
-	- 32khz crystal
-	- buck converter (12v et 5v)
-	- boost converter (chargeur intégré)
+Microcontroleur BMS : PIC16(L)F19175/76
+Microcontrôleur controleur : dsPIC33CK256MP203 (version mémoire plus faible sera revu si la mémoire est surdimensionnée)
+Microcontrôleur TDB : arduino pro mini
 	
-	
-	
-	
+Mosfet des esc : IRFR3607TRPBF ou igbt FGH60N60 (dispo aliexpress)
 	
 	
 	
